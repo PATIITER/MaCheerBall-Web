@@ -1,0 +1,178 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>vote-check</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+    <ion-row>
+        <ion-col>
+               <ion-item lines="none" >
+                   <ion-button  slot="end" size="default" color="tertiary">
+                      <ion-icon name="shuffle" slot="start"></ion-icon>
+                   สุ่มรางวัล
+                   </ion-button>
+                   </ion-item>
+          </ion-col>
+       </ion-row>
+
+    <ion-card class="ion-padding">
+        <ion-item >
+          <ion-text text-center>
+            <h2>รายการทายผล</h2>
+          </ion-text>
+        </ion-item>
+        <ion-row>
+          <ion-col text-center>
+            <span>รายการทายผล วันที่ 12/10/2019 11:59</span><br>
+            <span>Juventus - Bayer Leverkusen</span>
+          </ion-col>
+        </ion-row>
+        <ion-grid>
+    
+    
+          <ion-row>
+            <ion-col>
+            <ion-segment scrollable>
+              <table class="fixed_header">
+                <thead>
+                  <tr>
+                    <th>ลำดับ</th>
+                    <th>รายชื่อ</th>
+                    <th>เบอร์โทร</th>
+                    
+                   <th>ประกาศผล</th>
+    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>เจ้ดำ</td>
+                    <td>0123456789</td>
+                    
+                    
+                    <td><ion-button color="secondary" (click)="presentAlertPrompt()">ประกาศผล</ion-button></td>
+    
+    
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>เจ้พร</td>
+                    <td>0123456789</td>
+                    
+                  
+                    <td><ion-button color="secondary" (click)="presentAlertPrompt()">ประกาศผล</ion-button></td>
+    
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>เจ้ฟ้า</td>
+                    <td>0123456789</td>
+                    
+                   
+                    <td><ion-button color="secondary" (click)="presentAlertPrompt()">ประกาศผล</ion-button></td>
+    
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>เจ้หนาว</td>
+                    <td>0123456789</td>
+                    
+                   
+                    <td><ion-button color="secondary" (click)="presentAlertPrompt()">ประกาศผล</ion-button></td>
+    
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>เจ้นอน</td>
+                    <td>0123456789</td>
+                    
+                   
+                    <td><ion-button color="secondary" (click)="presentAlertPrompt()">ประกาศผล</ion-button></td>
+    
+                  </tr>
+                </tbody>
+              </table>
+
+              
+            </ion-segment>
+        </ion-col>
+
+        <ion-col>
+            <ion-segment scrollable>
+                <table class="fixed_header">
+                  <thead>
+                    <tr>
+                      <th>ลำดับ</th>
+                      <th>รายชื่อ</th>
+                      <th>เบอร์โทร</th>
+                      
+                     <th>ประกาศผล</th>
+      
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>เจ้ดำ</td>
+                      <td>0123456789</td>
+                      
+                      
+                      <td><ion-button color="secondary" (click)="presentAlertPrompt()">ประกาศผล</ion-button></td>
+      
+      
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>เจ้พร</td>
+                      <td>0123456789</td>
+                      
+                    
+                      <td><ion-button color="secondary" (click)="presentAlertPrompt()">ประกาศผล</ion-button></td>
+      
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>เจ้ฟ้า</td>
+                      <td>0123456789</td>
+                      
+                     
+                      <td><ion-button color="secondary" (click)="presentAlertPrompt()">ประกาศผล</ion-button></td>
+      
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>เจ้หนาว</td>
+                      <td>0123456789</td>
+                      
+                     
+                      <td><ion-button color="secondary" (click)="presentAlertPrompt()">ประกาศผล</ion-button></td>
+      
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>เจ้นอน</td>
+                      <td>0123456789</td>
+                      
+                     
+                      <td><ion-button color="secondary" (click)="presentAlertPrompt()">ประกาศผล</ion-button></td>
+      
+                    </tr>
+                  </tbody>
+                </table>
+  
+                
+              </ion-segment>
+
+
+        </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+
+</ion-content>

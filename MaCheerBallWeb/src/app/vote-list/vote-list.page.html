@@ -1,0 +1,104 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>vote-list</ion-title>
+    <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-row>
+     <ion-col>
+            <ion-item lines="none" >
+                <ion-button  slot="end" size="default" (click)="gopageVoteAdd()">
+                + เพิ่ม
+                </ion-button>
+                </ion-item>
+       </ion-col>
+    </ion-row>
+    <ion-card class="ion-padding">
+        <ion-row>
+          <ion-col text-center>
+            <h1>รายการ ทายผล</h1>
+          </ion-col>
+        </ion-row>
+    
+        <ion-grid >
+    
+          <ion-row>
+            <ion-segment scrollable>
+              <table class="fixed_header">
+                <thead>
+                  <tr>
+                    <th>วันที่/เวลา</th>
+                    <th>เจ้าบ้าน</th>
+                    <th>score</th>
+                    <th>ทีมเยือน</th>
+                    
+                    <th width="5%">ดูข้อมูล</th>
+                    <th width="5%">แก้ไข</th>
+                    <th width="5%">ลบ</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td> 12/10/2019 11:59</td>
+                    <td>Tottenham Hotspur</td>
+                    <td>  {{name1}}</td>
+                    <td>Bayern Munchen</td>
+                     <td>
+                      <ion-button color="secondary" (click)="gotoVoteCheck()">ดูข้อมูล</ion-button>
+                    </td>
+                    <td>
+                        <ion-button color="warning" (click)="presentAlertPrompt1()">แก้ไข</ion-button>
+                      </td> 
+                      <td>
+                          <ion-button color="danger" (click)="presentAlertPrompt()">ลบ</ion-button>
+                        </td>
+                      
+                    
+                  </tr>
+                  <tr>
+                    <td> 12/10/2019 11:59</td>
+                    <td>Juventus</td>
+                    <td>0 - 0</td>
+                    <td>Bayer Leverkusen</td>
+                    
+                    <td>
+                      <ion-button color="secondary" (click)="gotoVoteCheck()">ดูข้อมูล</ion-button>
+                    </td>
+                    <td>
+                        <ion-button color="warning" (click)="presentAlertPrompt1()">แก้ไข</ion-button>
+                      </td>
+                      <td>
+                          <ion-button color="danger" (click)="presentAlertPrompt()">ลบ</ion-button>
+                        </td>
+                    
+                  </tr>
+                  <tr>
+                    <td> 12/10/2019 11:59</td>
+                    <td>Lamphun Warrior FC U19</td>
+                    <td>0 - 0</td>
+                    <td>Lampang FC U19</td>
+                   
+                    <td>
+                      <ion-button color="secondary" (click)="gotoVoteCheck()">ดูข้อมูล</ion-button>
+                    </td>
+                    <td>
+                        <ion-button color="warning" (click)="presentAlertPrompt1()">แก้ไข</ion-button>
+                      </td>
+                      <td>
+                          <ion-button color="danger" (click)="presentAlertPrompt()">ลบ</ion-button>
+                        </td>
+                    
+                  </tr>
+                </tbody>
+              </table>
+            </ion-segment>
+          </ion-row>
+        </ion-grid>
+      </ion-card>
+
+</ion-content>

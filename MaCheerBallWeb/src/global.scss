@@ -24,3 +24,75 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+table,
+td,
+th,
+tr {
+  text-align: center;
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  tr:hover {
+    background-color: #ddd;
+  }
+}
+
+th {
+  height: 45px;
+  background-color: palegoldenrod;
+}
+
+ion-label {
+  font-size: 20px;
+}
+
+.input1{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 15px;
+  height: 50px;
+  margin: auto;
+}
+
+ion-input td{
+  text-align: center;
+}
+
+ion-select,
+ion-datetime,
+ion-select-option,
+ion-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-size: 15px;
+  height: 50px;
+  margin: auto;
+}
+
+.fixed_header th,
+.fixed_header td {
+  padding: 5px;
+  text-align: center;
+  width: 500px;
+  overflow: auto;
+}
+
+
+.invalid {
+    border: 1px solid red;
+}
+
+.invalid-msg{
+    color: red;
+}
+
+ion-card-header{
+  --background: rgb(228, 229, 153);
+}
