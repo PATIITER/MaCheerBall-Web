@@ -26,10 +26,10 @@
             <h2>รายการทายผล</h2>
           </ion-text>
         </ion-item>
-        <ion-row>
+        <ion-row *ngIf="pollbyId != null">
           <ion-col text-center>
-            <span>รายการทายผล วันที่ 12/10/2019 11:59</span><br>
-            <span>Juventus - Bayer Leverkusen</span>
+            <span>รายการทายผล วันที่ {{ pollbyId.dateBall | date: 'dd/MM/yyyy' }} {{ pollbyId.timeBall | date: 'HH:mm' }}</span><br>
+            <span>{{ pollbyId.homeTeamName }} - {{ pollbyId.awayTeamName }}</span>
           </ion-col>
         </ion-row>
         <ion-grid>

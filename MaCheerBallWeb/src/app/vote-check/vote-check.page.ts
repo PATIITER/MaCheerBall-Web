@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CallapiService } from '../service/callapi.service';
+import { ActivatedRoute } from '@angular/router';
+import { poll } from '../models/poll';
 
 @Component({
   selector: 'app-vote-check',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VoteCheckPage implements OnInit {
 
-  constructor() { }
+  getid:string;
+  pollbyId:poll;
+
+  constructor(public callapi:CallapiService , public activated:ActivatedRoute) {
+    this.getid = activated.snapshot.paramMap.get('_id');
+    console.log(this.getid);
+    callapi.GetPollByid(this.getid).subscribe(it =>{
+      // console.log(it);
+      this.pollbyId = it;
+      console.log(this.pollbyId);
+    });
+   }
 
   ngOnInit() {
   }
+
+
 
 }

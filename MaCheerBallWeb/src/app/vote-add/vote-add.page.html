@@ -9,32 +9,31 @@
 
 <ion-content>
 
-    <ion-card class="ion-padding">
-        <ion-row color="primary" justify-content-center>
-          <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
-            <div text-center>
-              <h3>เพิ่มรายการท้ายผล</h3>
-            </div>
-            <div>
-                
-              <ion-label>วันที่</ion-label>
-              <ion-datetime display-format="DD/MM/YY " placeholder="เลือก วันที่"></ion-datetime>
-              <ion-label>เวลา</ion-label>
-              <ion-datetime display-format="HH:mm"></ion-datetime>
-              <ion-label>เจ้าบ้าน</ion-label>
-              <ion-input class="input1" type="text" placeholder="เจ้าบ้าน"></ion-input>
-              <ion-label>Score</ion-label>
-              <ion-input class="input1" type="text" placeholder="Score"></ion-input>
-              <ion-label>ทีมเยือน</ion-label>
-              <ion-input class="input1" type="text" placeholder="ทีมเยือน"></ion-input>
-              
-              
-            </div>
-            <div>
-              <ion-button size="large" expand="block" (click)="presentAlertConfirm()">บันทึก</ion-button>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-card>
+    <form [formGroup]="data" (ngSubmit)="presentAlertConfirm()">
+  <ion-card class="ion-padding">
+    <ion-row color="primary" justify-content-center>
+      <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+        <div text-center>
+          <h3>เพิ่มรายการท้ายผล</h3>
+        </div>
+        <div>  
+          <ion-label>เจ้าบ้าน</ion-label>
+          <ion-input class="input1" type="text" placeholder="เจ้าบ้าน" formControlName="homeTeamName"></ion-input>
+          <ion-label>ทีมเยือน</ion-label>
+          <ion-input class="input1" type="text" placeholder="ทีมเยือน" formControlName="awayTeamName"></ion-input>
+          <ion-label>วันที่</ion-label>
+          <ion-datetime display-format="DD/MM/YY " placeholder="เลือก วันที่" formControlName="dateBall"></ion-datetime>
+          <ion-label>เวลาเตะ</ion-label>
+          <ion-datetime display-format="HH:mm" placeholder="เลือก เวลาเตะ" formControlName="timeBall"></ion-datetime>
+          <ion-label>เวลาปิดโหวต</ion-label>
+          <ion-datetime display-format="HH:mm"  placeholder="เลือก เวลาปิดโหวต" formControlName="timeEndPoll"></ion-datetime>
+        </div>
+        <div>
+          <ion-button size="large" expand="block" type="submit">บันทึก</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</form>
 
 </ion-content>
